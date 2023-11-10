@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr"x-data="{menuIsOpen: false}"></html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen}">
+</html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -60,6 +61,32 @@
       nemo aliquid pariatur quam voluptates animi laudantium, aperiam
       consectetur nobis enim.
     </p>
+    <dl x-data ="{ddIsOpen: false}">
+      <u>
+      <dt @click ="ddIsOpen = ! ddIsOpen"> 
+        Lorem.</dt> 
+      </u>
+      
+      <dd x-show="ddIsOpen">
+
+      Lorem ipsum dolor sit amet.</dd>
+    <dl x-data ="{ddIsOpen: false}">
+    <u>
+      <dt @click ="ddIsOpen = ! ddIsOpen">
+        Veritatis.</dt>
+      </u>
+      <dd x-show="ddIsOpen">
+
+        Temporibus assumenda accusamus illo consequatur?</dd>
+    </dl>
+    <dl x-data = "{ddIsOpen: false}">
+      <u>
+      <dt @click="ddIsOpen = ! ddIsOpen" >
+        Dolor</dt>
+      </u>
+      <dd x-show="ddIsOpen">
+        Maxime reiciendis voluptatibus exercitationem odit?</dd>
+    </dl>
   </body>
 </html>
 
