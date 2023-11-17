@@ -1,14 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Chat 2</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 <body>
     <h1>Chapristi</h1>
 </body>
+<nav>
+    <button aria-controls="mainNav"  
+      @click="menuIsOpen = ! menuIsOpen"
+      class="header__menuBtn"
+      >
+        menu
+      </button>
+      
+      <nav 
+      id="mainNav" 
+      x-show="menuIsOpen" 
+      x-transition.duration.800ms
+      class="menu"
+      > <ul>
+        
+          <a href="/Cats/index.html">Les chats</a>
+      <ul>
+          <li><a href="/Cats/Chat_01.html">Les chats noirs</a></li>
+          <li><a href="/Cats/Chat_02.html">Les chats roux </a></li> </ul> 
 
+         <a href="/Dogs/index.html">Les chiens</a>
+        <ul>
+          <li><a href="/Dogs/chien_01.html">Les chiens blanc</a></li>
+          <li><a href="/Dogs/chien_02.html">Les Bergers allemand </a></li> 
+        </ul>
+        </ul>
+      </nav>
+</nav>
 <nav> 
     <li><a href="/index.html">Accueil</a></li>
     <ul>
