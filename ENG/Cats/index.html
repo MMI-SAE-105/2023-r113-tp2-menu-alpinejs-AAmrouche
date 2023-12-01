@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page dédié au chat</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+</head>
+<body>
+    <h1> Cat's home</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi id exercitationem odio sint hic asperiores deserunt dignissimos expedita maxime, vel distinctio possimus soluta quod doloremque temporibus perferendis, voluptatibus quia tenetur!</p>
+    <nav>
+    <button aria-controls="mainNav"  
+      @click="menuIsOpen = ! menuIsOpen"
+      class="header__menuBtn"
+      > <img class="media media--fullwidth" src="/Public/icones/Menu.svg "> 
+      </button>
+      
+      <nav 
+      id="mainNav" 
+      x-show="menuIsOpen" 
+      x-transition.duration.800ms
+      class="menu"
+      > <a href="/index.html"> Cat's home </a>
+      <ul>
+        
+          <a href="/Cats/index.html">
+            <img class="media media--fullwidth" src="/Public/icones/Chat.svg">
+            Cats</a>
+      <ul>
+          <li><a href="/Cats/Chat_01.html">the black cats</a></li>
+          <li><a href="/Cats/Chat_02.html">the ginger cats</a></li> </ul> 
+
+         <a href="/Dogs/index.html">
+          <img class="media media--fullwidth" src="/Public/icones/Chien.svg">
+          Dogs</a>
+        <ul>
+          <li><a href="/Dogs/chien_01.html">The white dog</a></li>
+          <li><a href="/Dogs/chien_02.html">The German shepherd </a></li> 
+        </ul>
+        </ul>
+      </nav>
+</nav>
+
+<img class="media media--fullwidth" src="/Public/img/cats/Cat_poster_2.jpg" Alt="Plusieurs image de chat en un">
+</body>
+</html>
